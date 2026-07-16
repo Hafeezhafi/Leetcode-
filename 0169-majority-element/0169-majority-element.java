@@ -1,0 +1,19 @@
+class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        int count =0;
+        int num=0;
+        for(int i:nums){
+            if(count==0){
+                num=i;
+            }
+            if(i==num){
+                count ++;
+            }
+            else{
+                count--;
+            }
+        }
+        return num;
+    }
+}
